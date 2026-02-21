@@ -1,128 +1,77 @@
-# Arquitetura do Projeto 0to5k
+# Arquitetura do Sistema de Gerenciamento de Ciclo e Performance (SGCP) - v3.3
 
-## 1. Resumo
+## 1. Visão Geral
 
-O `0to5k` é um projeto **local-first** orientado a conteúdo, composto por:
+O SGCP é uma aplicação full-stack de alta performance desenvolvida para atletas de alto rendimento, focada no monitoramento de protocolos hormonais, treinos, nutrição e saúde clínica. O projeto utiliza as tecnologias mais recentes do ecossistema Next.js/Vercel para garantir velocidade, escalabilidade e uma UX premium.
 
-- uma planilha `.xlsx` como núcleo de operação do programa;
-- documentação em Markdown para instruções, contexto técnico e navegação.
+## 2. Tech Stack (v3.3)
 
-Não há backend, API, banco remoto, autenticação ou integrações automáticas implementadas no estado atual.
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+- **Linguagem**: TypeScript
+- **Banco de Dados**: PostgreSQL via [Supabase](https://supabase.com/)
+- **ORM**: [Drizzle ORM](https://orm.drizzle.team/) (Type-safe & Lightweight)
+- **Estilização**: Tailwind CSS + ShadCN UI
+- **Gráficos**: Recharts (Via ShadCN Chart)
+- **Gerenciamento de Estado**:
+  - Server State: Tanstack Query (opcional) / Server Components
+  - Local State: React Hooks
+- **Autenticação**: Supabase SSR (Auth)
 
-## 2. Estrutura Atual do Repositório
+## 3. Padrões Arquiteturais
+
+### 3.1 Data Fetching & Performance
+
+Seguindo as **Vercel Best Practices**, o sistema implementa:
+
+- **Parallel Fetching**: Uso de `Promise.all` para evitar "waterfalls" no carregamento de dados do Dashboard.
+- **Deduplicação**: Uso de `React.cache()` em camadas de serviço para evitar múltiplas chamadas ao banco na mesma requisição.
+- **Progressive Rendering**: Implementação de `Suspense boundaries` com Skeletons personalizados para seções críticas (KPIs, Agenda, Histórico).
+- **Server Actions**: Todas as mutações (registros de aplicação, treino, dieta) são tratadas via React Server Actions com revalidação de cache instantânea (`revalidatePath`).
+
+### 3.2 Estrutura de Pastas
 
 ```text
-0to5k/
-├── ARCHITECTURE.md
-├── README.md
-├── .gitignore
-├── assets/
-│   └── images/
-│       └── banner.png
-├── data/
-│   └── planilha_zero_aos_5km.xlsx
-└── docs/
-    ├── EXECUTIVE_SUMMARY.md
-    ├── GETTING_STARTED.md
-    ├── INDEX.md
-    ├── PROJETO_FINAL.txt
-    └── estrutura_planilha_zero_aos_5km.md
+src/
+├── app/                  # Rotas e Páginas (App Router)
+│   ├── (auth)/           # Fluxo de autenticação
+│   ├── (dashboard)/      # Aplicação principal (Ciclo, Treino, Nutrição, Exames)
+│   └── api/              # Endpoints auxiliares
+├── components/          # Componentes UI reutilizáveis
+│   ├── ui/               # Componentes base (ShadCN)
+│   └── dashboard/        # Componentes específicos de negócio
+├── lib/                 # Core utilities
+│   ├── db/               # Configuração Drizzle + Schema
+│   ├── supabase/         # Clients Server/Client para Supabase
+│   └── services/         # Camada de lógica de busca de dados
+└── hooks/               # Custom hooks reutilizáveis
 ```
 
-## 3. Componentes Centrais
+## 4. Modelagem de Dados
 
-### 3.1 Núcleo de Dados (Spreadsheet)
+O esquema do banco de dados é gerido pelo Drizzle ORM e focado em performance:
 
-**Arquivo**: `data/planilha_zero_aos_5km.xlsx`
+- **Tipos Nativos**: Uso de `date` nativo para histórico temporal e `jsonb` para dados flexíveis (PRs de treino, itens de plano alimentar).
+- **Relacionamentos**: Estrutura normalizada para garantir integridade entre ciclos, aplicações e resultados de exames.
 
-A planilha é o componente funcional principal, com três abas:
+## 5. Fluxo de Autenticação e Segurança
 
-- `Plano de Treinos`: planejamento semanal e registro por sessão;
-- `Dicas & Protocolo`: regras operacionais e orientações de segurança;
-- `Resumo Semanal`: consolidação manual por semana.
+- **Middleware**: Proteção de rotas servidor-side no Next.js verificando a sessão do Supabase.
+- **RSC Auth**: Verificação de usuário diretamente em Server Components para renderização segura.
+- **RLS (Row Level Security)**: (Em progresso) Políticas no Supabase para garantir que usuários acessem apenas seus próprios dados.
 
-Características atuais:
+## 6. Design System
 
-- sem fórmulas;
-- sem validações de dados;
-- consistência entre abas feita por preenchimento manual.
+- **Estética**: High-end/Premium, utilizando `tailwindcss-animate` para micro-interações.
+- **Responsividade**: Interface mobile-first otimizada para logs rápidos na academia (PWA-ready).
+- **Acessibilidade**: Seguindo padrões ARIA via Radix UI (base do ShadCN).
 
-Referência de estrutura: `docs/estrutura_planilha_zero_aos_5km.md`.
+## 7. Manutenibilidade e CI/CD
 
-### 3.2 Camada de Documentação
+- **Drizzle Kit**: Sincronização automática de schema via `npm run db:push`.
+- **Scripts de Seed**: `npm run db:seed` para popular tabelas de referência (compostos, valores de exames).
+- **Vercel Deploy**: Configurado para otimização de bundle e monitoramento via `next-bundle-analyzer`.
 
-Arquivos de apoio:
+---
 
-- `README.md`: documentação principal para uso do programa;
-- `docs/GETTING_STARTED.md`: guia rápido;
-- `docs/INDEX.md`: índice de navegação;
-- `docs/EXECUTIVE_SUMMARY.md`: visão executiva;
-- `ARCHITECTURE.md`: visão arquitetural.
-
-### 3.3 Ativos Estáticos
-
-- `assets/images/banner.png`: ativo visual usado no `README.md`.
-
-## 4. Fluxo Operacional (As-Is)
-
-```mermaid
-flowchart TD
-    U[Usuário] --> D[docs/GETTING_STARTED.md]
-    D --> P[data/planilha_zero_aos_5km.xlsx]
-    P --> R[Registro manual de tempo, distância, FC, esforço]
-    R --> S[Resumo semanal manual]
-    U --> M[README.md e docs/INDEX.md para consulta]
-```
-
-## 5. Decisões Arquiteturais Atuais
-
-1. **Local-first**: dados ficam no dispositivo do usuário.
-2. **Interoperabilidade por arquivo**: distribuição via `.xlsx`.
-3. **Baixa complexidade operacional**: sem serviços externos obrigatórios.
-4. **Documentação como interface**: Markdown centraliza orientação e manutenção.
-
-## 6. Armazenamento e Privacidade
-
-### 6.1 Armazenamento Primário
-
-- `data/planilha_zero_aos_5km.xlsx` é o armazenamento persistente de uso.
-
-### 6.2 Privacidade
-
-- A privacidade depende do controle local do arquivo pelo usuário.
-- O repositório não coleta telemetria nem transmite dados automaticamente.
-
-## 7. Limitações Conhecidas
-
-1. A consistência entre abas depende de preenchimento manual.
-2. Não existe integração automática com plataformas de treino.
-3. Parte da documentação ainda contém referências legadas e precisa de normalização para refletir apenas arquivos existentes no repositório atual.
-
-## 8. Próximos Passos (Roadmap Reduzido)
-
-### Curto prazo
-
-- normalizar referências documentais para refletir apenas arquivos existentes;
-- adicionar validação automática de links/documentação no CI.
-
-### Médio prazo
-
-- avaliar script de verificação de consistência da planilha (campos obrigatórios por semana);
-- definir padrão de versionamento para mudanças de conteúdo da planilha.
-
-### Longo prazo (hipótese)
-
-- avaliar viabilidade de uma interface digital complementar à planilha.
-
-## 9. Identificação do Projeto
-
-- **Nome**: 0to5k
-- **Repositório**: [github.com/gabrielramos/0to5k](https://github.com/gabrielramos/0to5k)
-- **Responsável**: Gabriel Ramos
-- **Última atualização deste documento**: 2026-02-21
-
-## 10. Glossário
-
-- **PSE**: Percepção Subjetiva de Esforço (escala de 1 a 10).
-- **Local-first**: dados residem primariamente no cliente/arquivo local.
-- **C25K**: Couch to 5K, protocolo-base adaptado para o contexto do projeto.
+_Última atualização: 2026-02-21_
+_Versão do Documento: 3.3.0_
