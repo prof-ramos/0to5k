@@ -1,89 +1,103 @@
 # Architecture Overview - 0to5k
 
-Este documento fornece uma visão geral da arquitetura do projeto **0to5k**. Atualmente, o projeto é centrado em dados e documentação, servindo como base para uma futura aplicação orientada ao usuário.
+Este documento fornece uma visão técnica e estrutural do projeto **0to5k**. Ele serve como guia para desenvolvedores e arquitetos que desejam entender a organização atual e o roadmap tecnológico.
 
 ## 1. Project Structure
 
-A estrutura atual é minimalista, focada na entrega de valor via planilha e documentação técnica.
+A estrutura é focada na entrega de ativos de dados e documentação técnica.
 
 ```text
 [Project Root]/
 ├── planilha_zero_aos_5km.xlsx   # Core: Motor de dados e lógica de progressão
-├── banner.png                   # Ativo visual de marca
-├── README.md                    # Interface principal de documentação e guia do usuário
-├── ARCHITECTURE.md              # Este documento (Visão técnica)
-└── .gitignore                   # Configurações de versionamento
+├── banner.png                   # Branding: Ativo visual principal
+├── .gitignore                   # Versionamento: Regras de exclusão
+├── README.md                    # Interface: Guia do usuário e documentação científica
+└── ARCHITECTURE.md              # Estrutura: Visão técnica e roadmap (Este arquivo)
 ```
 
 ## 2. High-Level System Diagram
 
-Atualmente, o sistema opera de forma local e offline:
+Atualmente, o fluxo é linear e baseado em entrada manual, com visão para automação futura.
 
-`[Usuário] <--> [Planilha Excel (Lógica/Dados)] <--> [Apps de Terceiros (Strava/NRC)]`
+```mermaid
+graph TD
+    subgraph "External Sources"
+        S1[Strava/Garmin]
+        S2[Google Fit]
+    end
 
-_O usuário utiliza a planilha para planejar e registrar, consumindo dados de sensores externos manualmente._
+    subgraph "0to5k Core (Excel)"
+        D1[Log de Treinos]
+        D2[Calculadora de Progressão]
+        D3[Protocolo de Segurança]
+    end
+
+    subgraph "Interface (Markdown)"
+        R1[README.md]
+        A1[ARCHITECTURE.md]
+    end
+
+    S1 -->|Manual Export| D1
+    S2 -->|Manual Sync| D1
+    D2 -->|Lógica| D1
+    D3 -->|Alertas| R1
+    D1 -->|Métricas| R1
+```
 
 ## 3. Core Components
 
-### 3.1. Data Domain (Excel)
+### 3.1. Data Engine (Spreadsheet)
 
-**Name**: Planilha Zero aos 5KM
-**Description**: Contém a lógica de progressão de 15 semanas, cálculos de volume semanal e validação de esforço (PSE).
-**Technologies**: Microsoft Excel / OpenXML.
+A planilha Excel não é apenas uma tabela, mas o "motor" do projeto, dividida em módulos:
 
-### 3.2. Documentation Layer
+- **Plano de Treinos**: Módulo de entrada/saída de dados semanais.
+- **Dicas & Protocolo**: Módulo de regras de negócio e validação clínica.
+- **Resumo Semanal**: Camada de agregação e visualização de métricas.
 
-**Name**: README.md
-**Description**: Serve como a "Frontend" atual, fornecendo todas as instruções e base científica para o programa.
+**Tecnologias**: Microsoft Excel, OpenXML, Fórmulas estáticas.
+
+### 3.2. Documentation & UI (Markdown)
+
+O `README.md` atua como a interface rica para o usuário, consumindo as definições estabelecidas na camada de dados.
 
 ## 4. Data Stores
 
-### 4.1. Primary Data Store
+### 4.1. Primary Store
 
-**Name**: `planilha_zero_aos_5km.xlsx`
-**Type**: Arquivo de Planilha Estuturado.
-**Purpose**: Armazena o plano de treino estático e os logs de execução do usuário.
+**Nome**: `planilha_zero_aos_5km.xlsx`
+**Propósito**: Armazenamento persistente (local) de treinos e progresso.
+**Métricas principais**: Distância (km), Tempo (min), PSE (Esforço), FC (bpm).
 
-## 5. External Integrations
+## 5. Security & Privacy
 
-O projeto não possui integrações via API no momento, mas orienta o uso de:
+Como o sistema é **local-first**:
 
-- **Strava/Garmin**: Captura de dados de GPS e Frequência Cardíaca.
-- **Google Fit**: Consolidação de métricas de saúde.
+- **Privacidade**: 100% dos dados de saúde ficam no dispositivo do usuário.
+- **Segurança**: Versionamento via Git apenas para a estrutura, nunca para os dados sensíveis do usuário (configurado via `.gitignore`).
 
-## 6. Deployment & Infrastructure
+## 6. Roadmap Tecnológico
 
-**Hosting**: GitHub (Versionamento e distribuição).
-**CI/CD**: N/A (Futuramente GitHub Actions para validação de dados).
+O objetivo é transformar este repositório de dados em uma plataforma SaaS.
 
-## 7. Security Considerations
+```mermaid
+timeline
+    title 0to5k Evolution
+    Fase 1 : Planilha Estática : Documentação Científica : Versionamento Inicial
+    Fase 2 : Web App (MVP) : React/Next.js : Supabase Auth
+    Fase 3 : Integração API : Strava OAuth : Sync Automático
+    Fase 4 : App Mobile : React Native : Notificações Push
+```
 
-**Data Privacy**: Como a planilha é local, os dados de saúde do usuário permanecem em seu dispositivo pessoal.
-
-## 8. Development Environment
-
-**Ferramentas**:
-
-- Editor de Texto (Markdown).
-- Microsoft Excel ou equivalente (Google Sheets, LibreOffice).
-
-## 9. Future Considerations / Roadmap
-
-O projeto prevê as seguintes evoluções arquiteturais:
-
-1. **Web App Conversion**: Migrar a lógica do Excel para uma aplicação React/Next.js.
-2. **API Integration**: Conexão direta com Strava API para automatizar o registro de treinos.
-3. **Database Migration**: Uso de Supabase ou PostgreSQL para armazenamento em nuvem.
-
-## 10. Project Identification
+## 7. Project Identification
 
 **Project Name**: 0to5k
-**Repository URL**: https://github.com/prof-ramos/0to5k
-**Primary Contact**: Gabriel Ramos
-**Date of Last Update**: 2026-02-21
+**Repository**: [github.com/prof-ramos/0to5k](https://github.com/prof-ramos/0to5k)
+**Lead**: Gabriel Ramos
+**Last Update**: 2026-02-21
 
-## 11. Glossary / Acronyms
+## 8. Glossary
 
-- **PSE**: Percepção Subjetiva de Es esforço (Escala 1-10).
-- **C25K**: Couch to 5K (Programa base).
+- **PSE**: Percepção Subjetiva de Esforço (Escala Borg adaptada 1-10).
+- **C25K**: Couch to 5K.
 - **ASPC**: American Society of Preventive Cardiology.
+- **Local-First**: Arquitetura onde o dado reside primariamente no cliente.
