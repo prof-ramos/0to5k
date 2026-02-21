@@ -1,10 +1,10 @@
-# Indice do Projeto 0to5k
+# Índice do Projeto 0to5k
 
 ## Comece por aqui
 
 1. Leia `docs/GETTING_STARTED.md` para iniciar rapidamente.
 2. Abra `data/planilha_zero_aos_5km.xlsx` e comece pela Semana 1.
-3. Use `README.md` para contexto cientifico e orientacoes detalhadas.
+3. Use `README.md` para contexto científico e orientações detalhadas.
 
 ## Estrutura atual de arquivos
 
@@ -12,6 +12,7 @@
 0to5k/
 ├── README.md
 ├── ARCHITECTURE.md
+├── .gitignore
 ├── assets/images/banner.png
 ├── data/planilha_zero_aos_5km.xlsx
 └── docs/
@@ -24,34 +25,34 @@
 
 ## Guia por objetivo
 
-### Usuario final
+### Usuário final
 
 - `docs/GETTING_STARTED.md`: passo a passo de uso.
-- `README.md`: protocolo completo, escalas e orientacoes.
-- `data/planilha_zero_aos_5km.xlsx`: registro pratico dos treinos.
+- `README.md`: protocolo completo, escalas e orientações.
+- `data/planilha_zero_aos_5km.xlsx`: registro prático dos treinos.
 
-### Gestao e visao executiva
+### Gestão e visão executiva
 
 - `docs/EXECUTIVE_SUMMARY.md`: resumo do projeto e escopo atual.
-- `ARCHITECTURE.md`: decisoes arquiteturais, limites e roadmap reduzido.
+- `ARCHITECTURE.md`: decisões arquiteturais, limites e roadmap reduzido.
 
-### Estrutura tecnica da planilha
+### Estrutura técnica da planilha
 
 - `docs/estrutura_planilha_zero_aos_5km.md`: mapeamento de abas, colunas e blocos semanais.
 
-## Referencias cruzadas confiaveis
+## Referências cruzadas confiáveis
 
 - `README.md` referencia o banner em `assets/images/banner.png`.
 - `docs/GETTING_STARTED.md` referencia a planilha em `data/planilha_zero_aos_5km.xlsx`.
-- `ARCHITECTURE.md` descreve apenas os arquivos existentes no repositorio.
+- `ARCHITECTURE.md` descreve apenas os arquivos existentes no repositório.
 
-## Observacao de consistencia
+## Observação de consistência
 
-Este indice foi normalizado para o estado atual do repositorio.  
-Referencias legadas foram removidas para manter consistencia com a arvore atual de arquivos.
+Este índice foi normalizado para o estado atual do repositório.
+Referências legadas foram removidas para manter consistência com a árvore atual de arquivos.
 
-## Proxima manutencao recomendada
+## Próxima manutenção recomendada
 
 1. Manter caminhos sempre em formato repo-root (`docs/...`, `data/...`, `assets/...`).
-2. Revisar links de documentacao a cada mudanca estrutural.
-3. Atualizar este indice sempre que novos artefatos forem adicionados.
+2. Revisar links de documentação a cada mudança estrutural.
+3. Atualizar este índice sempre que novos artefatos forem adicionados.

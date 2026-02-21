@@ -1,19 +1,19 @@
 PROJETO 0TO5K - ESTADO FINAL DOCUMENTADO
 Data: 2026-02-21
-Versao: 1.1.0
+Versão: 1.1.0
 
 ======================================================================
 1) OBJETIVO
 ======================================================================
 
-Disponibilizar um programa seguro de progressao para corrida (0 a 5 km),
-com foco em iniciantes, sedentarios e fumantes, usando um formato simples:
+Disponibilizar um programa seguro de progressão para corrida (0 a 5 km),
+com foco em iniciantes, sedentários e fumantes, usando um formato simples:
 
-- planilha `.xlsx` como nucleo operacional;
-- documentacao Markdown como camada de orientacao.
+- planilha `.xlsx` como núcleo operacional;
+- documentação Markdown como camada de orientação.
 
 ======================================================================
-2) ARTEFATOS EXISTENTES NO REPOSITORIO
+2) ARTEFATOS EXISTENTES NO REPOSITÓRIO
 ======================================================================
 
 Raiz:
@@ -27,7 +27,7 @@ Assets:
 Dados:
 - data/planilha_zero_aos_5km.xlsx
 
-Documentacao:
+Documentação:
 - docs/GETTING_STARTED.md
 - docs/INDEX.md
 - docs/EXECUTIVE_SUMMARY.md
@@ -49,40 +49,40 @@ Mapeamento detalhado:
 - docs/estrutura_planilha_zero_aos_5km.md
 
 ======================================================================
-4) CARACTERISTICAS ARQUITETURAIS
+4) CARACTERÍSTICAS ARQUITETURAIS
 ======================================================================
 
-- Local-first: dados ficam com o usuario.
-- Sem backend, API publica ou banco remoto no estado atual.
-- Sem sincronizacao automatica com apps externos.
-- Fluxo manual de registro e consolidacao.
+- Local-first: dados ficam com o usuário.
+- Sem backend, API pública ou banco remoto no estado atual.
+- Sem sincronização automática com apps externos.
+- Fluxo manual de registro e consolidação.
 
 ======================================================================
-5) CONSISTENCIA DOCUMENTAL (NORMALIZADA)
+5) CONSISTÊNCIA DOCUMENTAL (NORMALIZADA)
 ======================================================================
 
-A documentacao foi atualizada para usar apenas caminhos que existem:
+A documentação foi atualizada para usar apenas caminhos que existem:
 
 - assets/images/banner.png
 - data/planilha_zero_aos_5km.xlsx
 - docs/...
 
-Referencias legadas para arquivos ausentes foram removidas ou substituidas.
+Referências legadas para arquivos ausentes foram removidas ou substituídas.
 
 ======================================================================
-6) PROXIMOS PASSOS RECOMENDADOS
+6) PRÓXIMOS PASSOS RECOMENDADOS
 ======================================================================
 
 Curto prazo:
-1. Validar links/documentacao automaticamente no CI.
-2. Manter indice (`docs/INDEX.md`) atualizado a cada mudanca estrutural.
+1. Validar links/documentação automaticamente no CI.
+2. Manter índice (`docs/INDEX.md`) atualizado a cada mudança estrutural.
 
-Medio prazo:
-1. Avaliar validacao automatica de preenchimento da planilha.
+Médio prazo:
+1. Avaliar validação automática de preenchimento da planilha.
 
 Longo prazo:
-1. Avaliar interface digital complementar a planilha.
+1. Avaliar interface digital complementar à planilha.
 
 ======================================================================
-Status: ESTAVEL E CONSISTENTE COM O REPOSITORIO ATUAL
+Status: ESTÁVEL E CONSISTENTE COM O REPOSITÓRIO ATUAL
 ======================================================================

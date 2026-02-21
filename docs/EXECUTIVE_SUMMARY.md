@@ -1,25 +1,25 @@
-# Sumario Executivo - 0to5k
+# Sumário Executivo - 0to5k
 
-## Visao geral
+## Visão geral
 
-O `0to5k` e um programa local-first para levar iniciantes, incluindo sedentarios e fumantes, do sedentarismo ate 5 km continuos em 15 semanas.
+O `0to5k` é um programa local-first para levar iniciantes, incluindo sedentários e fumantes, do sedentarismo até 5 km contínuos em 15 semanas.
 
-O produto atual e composto por:
+O produto atual é composto por:
 
 - planilha operacional em `data/planilha_zero_aos_5km.xlsx`;
-- documentacao em Markdown para orientacao, navegacao e manutencao;
+- documentação em Markdown para orientação, navegação e manutenção;
 - ativo visual em `assets/images/banner.png`.
 
-## Entregaveis existentes
+## Entregáveis existentes
 
-### 1) Nucleo do programa
+### 1) Núcleo do programa
 
 - `data/planilha_zero_aos_5km.xlsx`
-  - Aba `Plano de Treinos`
-  - Aba `Dicas & Protocolo`
-  - Aba `Resumo Semanal`
+  - Módulo `Plano de Treinos`
+  - Módulo `Dicas & Protocolo`
+  - Módulo `Resumo Semanal`
 
-### 2) Documentacao
+### 2) Documentação
 
 - `README.md`
 - `ARCHITECTURE.md`
@@ -32,47 +32,47 @@ O produto atual e composto por:
 
 - `assets/images/banner.png`
 
-## Caracteristicas tecnicas atuais
+## Características técnicas atuais
 
 - Arquitetura local-first, sem backend/API.
-- Sem telemetria ou sincronizacao automatica.
-- Operacao centrada em preenchimento manual da planilha.
-- Compatibilidade com Excel e Google Sheets (importacao do `.xlsx`).
+- Sem telemetria ou sincronização automática.
+- Operação centrada em preenchimento manual da planilha.
+- Compatibilidade com Excel e Google Sheets (importação do `.xlsx`).
 
-## Fundamentacao do protocolo
+## Fundamentação do protocolo
 
-O protocolo do programa foi documentado com base cientifica no `README.md`, incluindo:
+O protocolo do programa foi documentado com base científica no `README.md`, incluindo:
 
-- progressao conservadora em 15 semanas;
-- fase inicial de adaptacao com caminhada;
-- foco em seguranca cardiovascular;
-- orientacoes especificas para fumantes.
+- progressão conservadora em 15 semanas;
+- fase inicial de adaptação com caminhada;
+- foco em segurança cardiovascular;
+- orientações específicas para fumantes.
 
 ## Limites do estado atual
 
-1. Nao ha integracao automatica com apps de corrida.
-2. Consolidacao de dados entre abas e manual.
-3. Parte da documentacao historica foi simplificada para refletir somente os arquivos existentes.
+1. Não há integração automática com apps de corrida.
+2. Consolidação de dados entre abas é manual.
+3. Parte da documentação histórica foi simplificada para refletir somente os arquivos existentes.
 
 ## Roadmap reduzido
 
 ### Curto prazo
 
-- manter consistencia de caminhos entre todos os docs;
-- adicionar verificacao automatica de links/documentacao.
+- manter consistência de caminhos entre todos os docs;
+- adicionar verificação automática de links/documentação.
 
-### Medio prazo
+### Médio prazo
 
-- avaliar validacao de preenchimento da planilha (campos obrigatorios por semana).
+- avaliar validação de preenchimento da planilha (campos obrigatórios por semana).
 
-### Longo prazo (hipotese)
+### Longo prazo (hipótese)
 
-- avaliar interface digital complementar a planilha.
+- avaliar interface digital complementar à planilha.
 
-## Identificacao
+## Identificação
 
 - Projeto: `0to5k`
-- Repositorio: `github.com/gabrielramos/0to5k`
-- Responsavel: Gabriel Ramos
-- Versao documental: 1.1.0
-- Atualizacao: 2026-02-21
+- Repositório: `github.com/gabrielramos/0to5k`
+- Responsável: Gabriel Ramos
+- Versão documental: 1.1.0
+- Atualização: 2026-02-21
