@@ -20,3 +20,6 @@ Desktop.ini
 
 # Metrics / Logs
 *.log
+
+# Local debug artifacts
+analisecoderabbit_debug.md
