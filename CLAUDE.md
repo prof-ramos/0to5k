@@ -30,7 +30,7 @@
     └── estrutura_planilha_zero_aos_5km.md  ← Spreadsheet schema reference
 ```
 
-**Total**: 10 tracked files. No source code, no dependencies, no CI/CD.
+**Total**: 11 tracked files. No source code, no dependencies, no CI/CD.
 
 ## Architecture
 
@@ -61,7 +61,7 @@ Files reference each other extensively. The trust map is:
 
 ### Scientific references
 
-The program cites 7 peer-reviewed studies. These references appear in `README.md` (detailed table) and `docs/GETTING_STARTED.md`. Do not alter citations without verifying accuracy. The studies are:
+The program cites 7 peer-reviewed studies. The detailed citation table appears in `README.md`; `docs/GETTING_STARTED.md` links back to `README.md` for the full references. Do not alter citations without verifying accuracy. The studies are:
 - Ooms L et al. (2013), Relph N et al. (2023), Lavie CJ et al. (2022, Parts I & II), Biswas A et al. (2024), Haasova M et al. (2018), Kessler HS et al. (2014)
 
 ### Spreadsheet structure
@@ -125,8 +125,8 @@ This project contains health and exercise guidance for vulnerable populations (s
 # Clone the repository
 git clone https://github.com/prof-ramos/0to5k.git
 
-# Check for broken internal links (manual — no tooling installed)
-grep -rn '\[.*\](.*\.md)' *.md docs/*.md | grep -v http
+# Check for broken internal Markdown links (manual — no tooling installed)
+grep -rnoP '\[[^\]]+\]\((?!http)[^)]+\.md\)' *.md docs/*.md
 
 # List all files tracked by git
 git ls-files
