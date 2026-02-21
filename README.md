@@ -1,198 +1,219 @@
-# 🏃 Planilha do Zero aos 5KM
+# 🏋 Programa Completo de Transformação — 0to5k
 
 ![Banner 0to5k](assets/images/banner.png)
 
-[![Versão](https://img.shields.io/badge/versão-1.1.0-blue.svg)](https://github.com/gabrielramos/0to5k)
-[![Status](https://img.shields.io/badge/status-ativo-brightgreen.svg)](https://github.com/gabrielramos/0to5k)
-[![Publico](https://img.shields.io/badge/público-sedentários_e_fumantes-orange.svg)](https://github.com/gabrielramos/0to5k)
-[![Local](https://img.shields.io/badge/foco-Brasília-yellow.svg)](https://github.com/gabrielramos/0to5k)
+[![Versão](https://img.shields.io/badge/versão-2.0.0-blue.svg)](https://github.com/gabrielramos/0to5k)
+[![Status](https://img.shields.io/badge/status-em_desenvolvimento-brightgreen.svg)](https://github.com/gabrielramos/0to5k)
+[![Licença](https://img.shields.io/badge/licença-CC--BY--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-## Programa de Corrida para Sedentários e Fumantes — 15 Semanas
-
----
-
-## 🌟 Por que este programa?
-
-Sair do sedentarismo, especialmente para quem fuma, é um desafio que exige paciência e estratégia. O método **0to5k** não é apenas sobre correr; é sobre reconstruir sua capacidade respiratória e fortalecer suas articulações de forma ultra-progressiva.
-
-Diferente do C25K tradicional, aqui respeitamos o tempo do seu coração e dos seus pulmões, com uma base científica sólida garantindo que cada passo seja seguro e sustentável.
+> **AVISO IMPORTANTE:** Este programa é fornecido APENAS PARA FINS EDUCACIONAIS. Consulte sempre um médico antes de iniciar qualquer protocolo de treinamento, nutrição ou terapia hormonal.
 
 ---
 
-## 🔬 Base Científica e Referências
+## 📋 Visão Geral
 
-Este programa foi elaborado com base em **7 estudos científicos revisados por pares**, garantindo que cada etapa do protocolo tenha fundamento clínico.
+Este é um programa **completo e integrado** de 15 semanas desenhado para transformação total do corpo e saúde, combinando:
 
-### 📖 Mapa de Decisões Baseadas em Evidências
-
-| Decisão do Programa                              | Estudo de Base              |
-| :----------------------------------------------- | :-------------------------- |
-| **15 semanas** (vs. 9 do C25K padrão)            | [2] Relph et al., 2023      |
-| **Fase 0** de caminhada pura (3 semanas)         | [5] Biswas et al., 2024     |
-| **Sem intervalos de alta intensidade**           | [7] Kessler et al., 2014    |
-| **Ritmo conversacional** (Critério de segurança) | [4] ASPC Part II, 2022      |
-| **Não fumar 2h antes do treino**                 | [3] ASPC Part I, 2022       |
-| **Treino como substituto do cigarro**            | [6] Haasova m, et al., 2018 |
-| **Avaliação médica prévia obrigatória**          | [3] ASPC Part I, 2022       |
-| **Aquecimento e desaceleração**                  | [1] Ooms et al., 2013       |
+- 🏋 **Treino de Força** — PPL (Push/Pull/Legs) estruturado
+- 🏃 **Corrida Progressiva** — "Zero aos 5KM" para sedentários/fumantes
+- 🥗 **Nutrição Calculada** — 3,145 kcal com macro precisa
+- 💉 **Protocolo Hormonal** — Sob supervisão médica estrita
+- 🧪 **Monitoramento Laboratorial** — Protocolos de segurança completos
 
 ---
 
-## 📋 Sobre o Projeto
+## 📚 Estrutura do Programa
 
-Esta planilha foi desenvolvida como um programa de corrida progressivo e seguro, adaptado especificamente para pessoas **sedentárias e/ou fumantes** que desejam chegar aos 5KM contínuos.
+Este repositório contém documentação separada para cada componente:
 
-### O que nos diferencia
+### 🏋 1. Treino de Força (`treino/`)
 
-- **Fase zero exclusiva**: 3 semanas de adaptação apenas com caminhada.
-- **Progressão Conservadora**: 15 semanas de evolução gradual.
-- **Foco em Segurança**: Alertas específicos para riscos cardiovasculares.
-- **Contexto Climático**: Dicas específicas para o clima seco (foco em Brasília).
+- **PPL Completo** — Guia de treinamento de força com periodização
+  - [`treino_ppl_completo.md`](treino/treino_ppl_completo.md)
+  - 15 semanas progressivas (Fases 0-3)
+  - Biblioteca completa de exercícios
+  - Estratégias de sobrecarga e periodização
+  - Referências científicas e boas práticas
 
----
+### 🏃 2. Programa de Corrida (`corrida/`)
 
-## 🛑 Check-up Inicial (Antes de começar)
+- **Zero aos 5KM** — Corrida progressiva para sedentários
+  - [`corrida_zero_5km.md`](corrida/corrida_zero_5km.md)
+  - 15 semanas (4 fases)
+  - Base científica com 7 estudos revisados
+  - Protocolos seguros para fumantes
+  - Orientações específicas para Brasília (clima seco)
 
-> [!CAUTION]
-> **AVISO MÉDICO**: Consulte um médico antes de iniciar qualquer atividade física intensa, especialmente se tiver histórico de tabagismo ou doenças cardiovasculares.
+### 🥗 3. Nutrição (`nutricao/`)
 
-- [ ] **Consulta Médica**: Essencial para quem fuma ou é sedentário há muito tempo.
-- [ ] **Eletrocardiograma**: Recomenda-se um exame de esforço.
-- [ ] **Tênis Adequado**: Deve ter amortecimento básico.
-- [ ] **Hidratação**: Tenha sempre uma garrafa de água, especialmente no Cerrado.
+- **Plano Alimentar Calculado** — 3,145 kcal/dia
+  - [`nutricao_calculada.md`](nutricao/nutricao_calculada.md)
+  - **Macros:** 227g proteína (2.84g/kg), 344g carboidratos, 104g gordura
+  - Planejamento de refeições
+  - Timing pré/pós-treino
+  - Lista de alimentos e substituições
+  - Hidratação e suplementação básica
 
----
+### 💉 4. Protocolo Hormonal (`ciclo/`)
 
-## 🗓️ Estrutura do Programa (15 Semanas)
+- **Terapia sob Supervisão Médica**
+  - [`ciclo_hormonal.md`](ciclo/ciclo_hormonal.md)
+  - Testosterona Enantato: 250mg/sem
+  - Nandrolona Decanoato: 100mg/sem
+  - Protocolos de aplicação e rotação de sítios
+  - Sinais de alerta e contraindicações
+  - **ATENÇÃO:** Apenas sob supervisão médica estrita
 
-O programa é dividido em **4 fases**, com **3 sessões semanais**.
+### 🧪 5. Exames Laboratoriais (`exames/`)
 
-### FASE 0 — Apenas Caminhada (Semanas 1–3)
-
-_Foco: hábito, articulações e sistema cardiovascular._
-
-| Semana | Sessão                        | Tempo Estimado |
-| :----- | :---------------------------- | :------------- |
-| 1      | 20 min de caminhada contínua  | 30 min         |
-| 2      | 25 min de caminhada acelerada | 35 min         |
-| 3      | 30 min de caminhada ofegante  | 40 min         |
-
----
-
-### FASE 1 — Primeiros Tiros de Corrida (Semanas 4–7)
-
-_Foco: introduzir corrida com intervalos muito curtos._
-
-| Semana | Protocolo                               | Tempo Correndo |
-| :----- | :-------------------------------------- | :------------- |
-| 4      | 8× (30s correndo / 2min caminhando)     | ~4 min         |
-| 5      | 8× (45s correndo / 2min caminhando)     | ~6 min         |
-| 6      | 6× (1min correndo / 2min caminhando)    | ~6 min         |
-| 7      | 6× (1min30s correndo / 2min caminhando) | ~9 min         |
-
----
-
-### FASE 2 — Construindo Base Aeróbica (Semanas 8–11)
-
-_Foco: aumentar blocos contínuos de corrida._
-
-| Semana | Protocolo                                | Tempo Correndo |
-| :----- | :--------------------------------------- | :------------- |
-| 8      | 5× (2min correndo / 2min caminhando)     | ~10 min        |
-| 9      | 4× (3min correndo / 2min caminhando)     | ~12 min        |
-| 10     | 3× (5min correndo / 2min caminhando)     | ~15 min        |
-| 11     | 2× (8min correndo / 2min caminh.) + 5min | ~21 min        |
+- **Protocolos de Monitoramento e Segurança**
+  - [`exames_monitoramento.md`](exames/exames_monitoramento.md)
+  - Painel hormonal completo
+  - Hematologia (hematócrito < 54%)
+  - Função hepática e renal
+  - Perfil metabólico (lipídios, glicose)
+  - Saúde prostática (PSA)
+  - Frequência de exames (inicial, 6 semanas, 12 semanas, pós-ciclo)
+  - Valores de referência e faixas de segurança
 
 ---
 
-### FASE 3 — Chegando nos 5KM (Semanas 12–15)
+## 📅 Fluxo Recomendado de Leitura
 
-_Foco: corrida contínua até 30 min / 5KM._
+Para começar corretamente, siga esta ordem:
 
-| Semana | Protocolo                             | Tempo Correndo |
-| :----- | :------------------------------------ | :------------- |
-| 12     | 2× (10min correndo / 3min caminhando) | ~20 min        |
-| 13     | 20 min contínuos                      | 20 min         |
-| 14     | 25 min contínuos                      | 25 min         |
-| 15     | **30 min contínuos 🏁 META!**         | 30 min         |
+1. **Leia o README atual** (este documento) — Visão geral
+2. **Leia o plano de corrida** — Entenda a base aeróbica
+3. **Leia o treino PPL** — Estrutura de força
+4. **Leia a nutrição** — Planejamento alimentar
+5. **Leia exames laboratoriais** — Monitoramento obrigatório
+6. **Leia o ciclo hormonal** — Somente sob supervisão médica
 
----
-
-## 📝 Como Usar a Planilha
-
-1. **Aba Plano de Treinos**: Preencha as **colunas amarelas** após cada sessão:
-   - Data, Tempo Real, Distância, FC Média, Esforço (1-10) e Observações.
-2. **Aba Resumo Semanal**: Consolide os dados ao final de cada domingo.
-3. **Aba Dicas & Protocolo**: Consulte sempre para detalhes do protocolo de cada sessão.
+> **IMPORTANTE:** Os componentes são integrados. Exames laboratoriais são obrigatórios durante todo o programa, especialmente durante o ciclo hormonal.
 
 ---
 
-## 🔢 Escala de Esforço (PSE 1–10)
+## ⚠️ Avisos Críticos
 
-| Nível   | Sensação     | Referência                                     | Alvo?         |
-| :------ | :----------- | :--------------------------------------------- | :------------ |
-| 1–2     | Muito leve   | Caminhada casual                               | -             |
-| 3–4     | Leve         | Conversação fácil                              | -             |
-| **5–6** | **Moderado** | **Ofegante, mas consegue falar frases curtas** | **Fases 0–2** |
-| 7–8     | Intenso      | Difícil conversar                              | Desafio       |
-| 9–10    | Máximo       | Exaustão                                       | Evitar        |
+### Segurança Médica
+- **Exames prévios obrigatórios:** Eletrocardiograma, exames de sangue completos
+- **Contra-indicações absolutas:** Doenças cardiovasculares, insuficiência hepática/renal, câncer de próstata
+- **Sinais de alerta:** Dor no peito, tontura, falta de ar extrema, batimentos irregulares
+- **Parar imediatamente:** Se qualquer sinal de alerta ocorrer
 
----
-
-## 🚬 Orientações para Fumantes
-
-> [!IMPORTANT]
-> O exercício aeróbico é um aliado poderoso para quem quer parar de fumar, mas exige cuidados extras.
-
-- **Janela de Segurança**: Não fume 2h antes e 2h depois do treino.
-- **Oxigenação**: O monóxido de carbono do cigarro "compete" com o oxigênio no sangue.
-- **Hidratação em Dobro**: Se estiver em Brasília (Maio-Setembro), a umidade baixa agrava o esforço respiratório.
+### Durante o Ciclo Hormonal
+- **Hematócrito crítico:** Deve permanecer abaixo de 54% (risco de trombose)
+- **Hidratação:** Aumentar consumo de água (4-5L/dia) para reduzir risco trombótico
+- **Frequência cardíaca:** Monitorar FC de repouso (aumento +10 bpm indica sobrecarga)
+- **Evite:** AINEs (ibuprofeno, diclofenaco) — aumentam risco cardiovascular
+- **AINEs naturais:** Use anti-inflamatórios naturais (curcumina, ômega-3, gengibre)
 
 ---
 
-## 🆘 Sinais para Parar Imediatamente
+## 📊 Resumo de Metas
 
-> Interrompa o treino e busque atendimento médico se sentir:
-
-- ❌ Dor ou pressão no peito
-- ❌ Tontura ou escurecimento da visão
-- ❌ Incapacidade de dizer uma palavra (falta de ar extrema)
-- ❌ Coração batendo de forma irregular após parar o esforço
-
----
-
-## ❓ FAQ — Perguntas Frequentes
-
-**1. Senti dor na canela (canelite), o que fazer?**
-Descanse e revise seu tênis. Se a dor persistir, não corra. Foque na Fase 0 por mais tempo.
-
-**2. Posso treinar todos os dias?**
-Não. O descanso é onde seu corpo se fortalece. O programa prevê 3x por semana.
-
-**3. E se eu não conseguir completar uma semana?**
-Sem problemas. Repita a mesma semana até se sentir confortável (PSE 5-6) para avançar.
+| Componente     | Meta Principal              | Duração   | Frequência              |
+|---------------|-----------------------------|-----------|------------------------|
+| **Treino PPL** | Hipertrofia + Força funcional | 15 sem    | 3-6x/semana            |
+| **Corrida 5KM** | 30 min contínuos            | 15 sem    | 3x/semana              |
+| **Nutrição**   | +250-500kcal (hipertrofia)   | Contínuo  | Diária                 |
+| **Ciclo Hormonal** | Manter níveis fisiológicos | 12-16 sem | 2x/semana              |
+| **Exames**     | Monitorar segurança          | Contínuo  | Inicial, 6sem, 12sem, pós |
 
 ---
 
-## 📚 Referências Detalhadas
+## 🔬 Base Científica
 
-- **[1] Ooms L, et al.** _BMC Public Health 2013_. Estrutura de aquecimento/desaceleração.
-- **[2] Relph N, et al.** _IJERPH 2023_. Prevenção de abandono e lesões na semana 5.
-- **[3] Lavie CJ, et al. (ASPC)**. _Am J Prev Cardiol 2022_. Portocolos para fumantes e riscos.
-- **[4] Lavie CJ, et al. (ASPC)**. _Am J Prev Cardiol 2022_. Definição de zonas de intensidade.
-- **[5] Biswas A, et al.** _IJERPH 2024_. Benefícios da caminhada para sedentários.
-- **[6] Haasova M, et al.** _Nicotine & Tobacco Res 2018_. Exercício na cessação do tabagismo.
-- **[7] Kessler HS, et al.** _Frontiers in Psychology 2014_. Riscos do HIIT para sedentários.
+Este programa combina **+15 estudos revisados por pares** nas áreas de:
+
+- **Fisiologia do Exercício:** Sobrecarga progressiva, hipertrofia, recuperação
+- **Cardiologia do Exercício:** Corrida progressiva para sedentários/fumantes
+- **Nutrição Esportiva:** Macros, timing, suplementação
+- **Endocrinologia Clínica:** Terapia de reposição, monitoramento
+- **Medicina Laboratorial:** Marcadores de segurança, faixas de referência
+
+Todas as referências estão listadas nos respectivos documentos.
+
+---
+
+## 🚀 Como Começar
+
+### Pré-requisitos Mínimos
+
+Antes de iniciar qualquer componente, você deve:
+
+- [ ] **Consulta médica completa** — AVALIAÇÃO CARDIOVASCULAR OBRIGATÓRIA
+- [ ] **Exames de sangue iniciais** — Painel completo (veja \`exames/exames_monitoramento.md\`)
+- [ ] **Avaliação física** — Peso, altura, composição corporal
+- [ ] **Liberação médica** — Para iniciar ciclo hormonal (se aplicável)
+- [ ] **Equipamento básico** — Tênis, roupa adequada, garrafa de água
+- [ ] **Local de treino** — Academia ou espaço adequado
+
+### Cronograma Sugerido
+
+**Semana 0-1:**
+1. Fazer exames laboratoriais completos
+2. Consultar médico (aprovação)
+3. Montar planejamento nutricional
+4. Configurar horários de treino
+
+**Semana 2-15:**
+1. Iniciar Fase 0 da corrida (caminhada)
+2. Iniciar Fase 0 do PPL (adaptação)
+3. Seguir plano nutricional estritamente
+4. (Se aprovado) Iniciar ciclo hormonal
+
+**Semana 6, 12, 16:**
+1. Repetir exames laboratoriais
+2. Ajustar dosagens (se aplicável)
+3. Avaliar progresso com médico
+
+---
+
+## 📞 Suporte e Responsabilidade
+
+### O que Este Programa NÃO É
+
+- ❌ Substituto para supervisão médica profissional
+- ❌ Prescrição médica ou farmacológica
+- ❌ Garantia de resultados
+- ❌ Adequado para todos os indivíduos (requer avaliação individual)
+
+### Responsabilidade do Usuário
+
+Ao utilizar este programa, você concorda que:
+- É responsável por consultar profissionais de saúde qualificados
+- Entende que os resultados variam individualmente
+- Interromperá o programa se apresentar sinais de alerta
+- Não processará os autores por danos causados pelo uso indevido
+
+---
+
+## 📚 Documentação Detalhada
+
+Cada componente tem sua própria documentação detalhada:
+
+| Documento                                              | Linhas | Descrição                                 |
+|--------------------------------------------------------|--------|--------------------------------------------|
+| [`treino/treino_ppl_completo.md`](treino/treino_ppl_completo.md) | 390    | PPL completo com periodização             |
+| [`corrida/corrida_zero_5km.md`](corrida/corrida_zero_5km.md)     | 198    | Zero aos 5KM baseado em evidências        |
+| [`nutricao/nutricao_calculada.md`](nutricao/nutricao_calculada.md) | ~200  | Plano alimentar calculado                 |
+| [`ciclo/ciclo_hormonal.md`](ciclo/ciclo_hormonal.md)            | ~250   | Protocolo hormonal supervisionado         |
+| [`exames/exames_monitoramento.md`](exames/exames_monitoramento.md) | ~300  | Exames laboratoriais completos            |
 
 ---
 
 ## 📌 Metadados
 
-- **Versão**: 1.1.0
-- **Duração**: 15 semanas (3 treinos/semana)
-- **Base Científica**: 7 estudos revisados por pares.
-- **Localização**: Brasília (Clima seco).
+- **Versão:** 2.0.0
+- **Duração total:** 15 semanas
+- **Público-alvo:** Sedentários, fumantes, iniciantes em fitness
+- **Localização:** Brasília (clima seco) — ajustes aplicáveis para outras regiões
+- **Base Científica:** +15 estudos revisados por pares
+- **Licença:** Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA 4.0)
 
 ---
 
 _Criado por Gabriel Ramos em 2026._
+
+**Todos os direitos reservados. Consulte sempre profissionais de saúde qualificados antes de iniciar qualquer protocolo de saúde ou fitness.**
