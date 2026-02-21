@@ -12,6 +12,7 @@
 0to5k/
 ├── README.md
 ├── ARCHITECTURE.md
+├── CLAUDE.md
 ├── .gitignore
 ├── assets/images/banner.png
 ├── data/planilha_zero_aos_5km.xlsx
@@ -39,6 +40,10 @@
 ### Estrutura técnica da planilha
 
 - `docs/estrutura_planilha_zero_aos_5km.md`: mapeamento de abas, colunas e blocos semanais.
+
+### Assistentes de IA
+
+- `CLAUDE.md`: guia de convenções, estrutura e regras para assistentes de IA que trabalham neste repositório.
 
 ## Referências cruzadas confiáveis
 
