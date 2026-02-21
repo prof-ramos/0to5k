@@ -8,8 +8,8 @@ A estrutura é focada na entrega de ativos de dados e documentação técnica.
 
 ```text
 [Project Root]/
-├── planilha_zero_aos_5km.xlsx   # Core: Motor de dados e lógica de progressão
-├── banner.png                   # Branding: Ativo visual principal
+├── data/planilha_zero_aos_5km.xlsx   # Core: Motor de dados e lógica de progressão
+├── assets/images/banner.png                   # Branding: Ativo visual principal
 ├── .gitignore                   # Versionamento: Regras de exclusão
 ├── README.md                    # Interface: Guia do usuário e documentação científica
 └── ARCHITECTURE.md              # Estrutura: Visão técnica e roadmap (Este arquivo)
@@ -64,7 +64,7 @@ O `README.md` atua como a interface rica para o usuário, consumindo as definiç
 
 ### 4.1. Primary Store
 
-**Nome**: `planilha_zero_aos_5km.xlsx`
+**Nome**: `data/planilha_zero_aos_5km.xlsx`
 **Propósito**: Armazenamento persistente (local) de treinos e progresso.
 **Métricas principais**: Distância (km), Tempo (min), PSE (Esforço), FC (bpm).
 

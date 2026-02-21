@@ -3,8 +3,8 @@
 ## 🎯 Comece por aqui
 
 ### Novo no projeto?
-1. Leia: **GETTING_STARTED.md** ← Guia de primeiros passos
-2. Baixe: **planilha_zero_aos_5km.xlsx** ← Arquivo principal
+1. Leia: **docs/GETTING_STARTED.md** ← Guia de primeiros passos
+2. Baixe: **data/planilha_zero_aos_5km.xlsx** ← Arquivo principal
 3. Execute: Seu primeiro treino (Semana 1)
 
 ### Quer entender a ciência?
@@ -23,12 +23,12 @@
 zero-aos-5km/
 │
 ├─ ENTREGÁVEIS PRINCIPAIS
-│  ├─ planilha_zero_aos_5km.xlsx      ⭐ Arquivo Excel (45 treinos)
+│  ├─ data/planilha_zero_aos_5km.xlsx      ⭐ Arquivo Excel (45 treinos)
 │  ├─ README.md                       ⭐ Documentação técnica completa
-│  └─ GETTING_STARTED.md              ⭐ Guia de início rápido
+│  └─ docs/GETTING_STARTED.md              ⭐ Guia de início rápido
 │
 ├─ DOCUMENTAÇÃO
-│  ├─ EXECUTIVE_SUMMARY.md            📊 Sumário para tomadores de decisão
+│  ├─ docs/EXECUTIVE_SUMMARY.md            📊 Sumário para tomadores de decisão
 │  ├─ CHANGELOG.md                    📜 Histórico de versões
 │  ├─ CONTRIBUTING.md                 👥 Como contribuir
 │  ├─ SECURITY.md                     🔒 Política de segurança
@@ -50,7 +50,7 @@ zero-aos-5km/
 │
 └─ METADADOS
    ├─ project_metadata.json           📊 Dados do projeto (JSON)
-   └─ INDEX.md (este arquivo)         📑 Navegação do projeto
+   └─ docs/INDEX.md (este arquivo)         📑 Navegação do projeto
 ```
 
 ---
@@ -61,9 +61,9 @@ zero-aos-5km/
 
 | Arquivo | Conteúdo | Tempo de Leitura |
 |---------|----------|-----------------|
-| **GETTING_STARTED.md** | Como usar a planilha, primeiros passos, checklist de segurança | 10 min |
+| **docs/GETTING_STARTED.md** | Como usar a planilha, primeiros passos, checklist de segurança | 10 min |
 | **README.md** (Seções 1–8) | Estrutura do programa, protocolo, dicas, clima de Brasília | 15 min |
-| **planilha_zero_aos_5km.xlsx** | Acompanhamento prático dos 45 treinos | Contínuo |
+| **data/planilha_zero_aos_5km.xlsx** | Acompanhamento prático dos 45 treinos | Contínuo |
 
 ### Para Profissionais de Saúde
 
@@ -100,7 +100,7 @@ zero-aos-5km/
 | Tópico | Local |
 |--------|-------|
 | ⚠️ Contraindicações | docs/GUIA_MEDICO.md + SECURITY.md |
-| 🆘 Sinais de parada | README.md + GETTING_STARTED.md |
+| 🆘 Sinais de parada | README.md + docs/GETTING_STARTED.md |
 | ❤️ Avaliação médica | README.md + SECURITY.md |
 | 🏥 Para profissionais | docs/GUIA_MEDICO.md |
 
@@ -108,17 +108,17 @@ zero-aos-5km/
 
 | Tópico | Local |
 |--------|-------|
-| 📅 Estrutura das 15 semanas | README.md + GETTING_STARTED.md |
+| 📅 Estrutura das 15 semanas | README.md + docs/GETTING_STARTED.md |
 | ⏱️ Protocolo de cada sessão | README.md + planilha (Aba 2) |
-| 📈 Regras de progressão | README.md + GETTING_STARTED.md |
-| 🚬 Dicas para fumantes | README.md + GETTING_STARTED.md |
+| 📈 Regras de progressão | README.md + docs/GETTING_STARTED.md |
+| 🚬 Dicas para fumantes | README.md + docs/GETTING_STARTED.md |
 
 ### Técnico & Desenvolvimento
 
 | Tópico | Local |
 |--------|-------|
 | 🐍 Instalar dependências | pyproject.toml + requirements.txt |
-| 🔧 Regenerar planilha | GETTING_STARTED.md (Opção 3) |
+| 🔧 Regenerar planilha | docs/GETTING_STARTED.md (Opção 3) |
 | 🤝 Contribuir | CONTRIBUTING.md |
 | 🚀 Fazer deploy | .github/workflows/validate.yml |
 
@@ -136,7 +136,7 @@ zero-aos-5km/
 
 ### Perfil: Iniciante em Corrida
 ```
-1. GETTING_STARTED.md (10 min)
+1. docs/GETTING_STARTED.md (10 min)
      ↓
 2. Planilha — Aba "Dicas & Protocolo" (5 min)
      ↓
@@ -167,7 +167,7 @@ zero-aos-5km/
 
 ### Perfil: Gerente/Stakeholder
 ```
-1. EXECUTIVE_SUMMARY.md (10 min)
+1. docs/EXECUTIVE_SUMMARY.md (10 min)
      ↓
 2. project_metadata.json (2 min)
      ↓
@@ -212,12 +212,12 @@ zero-aos-5km/
 ## 🔗 Referências Cruzadas
 
 ### README.md referencia:
-- ✓ GETTING_STARTED.md (como usar)
+- ✓ docs/GETTING_STARTED.md (como usar)
 - ✓ docs/GUIA_MEDICO.md (profissionais)
 - ✓ SECURITY.md (disclaimers)
 - ✓ Referências científicas (7 estudos)
 
-### GETTING_STARTED.md referencia:
+### docs/GETTING_STARTED.md referencia:
 - ✓ README.md (documentação completa)
 - ✓ planilha Excel (Aba "Dicas & Protocolo")
 - ✓ SECURITY.md (sinais de parada)
@@ -230,7 +230,7 @@ zero-aos-5km/
 ### docs/GUIA_MEDICO.md referencia:
 - ✓ README.md (Seção 🔬 Referências)
 - ✓ SECURITY.md (contraindicações)
-- ✓ GETTING_STARTED.md (protocolo)
+- ✓ docs/GETTING_STARTED.md (protocolo)
 
 ---
 
@@ -238,8 +238,8 @@ zero-aos-5km/
 
 ### Se você é usuário:
 1. ✅ Consultou seu médico?
-2. 📥 Baixou `planilha_zero_aos_5km.xlsx`?
-3. 📖 Leu `GETTING_STARTED.md`?
+2. 📥 Baixou `data/planilha_zero_aos_5km.xlsx`?
+3. 📖 Leu `docs/GETTING_STARTED.md`?
 4. 🏃 Pronto para a Semana 1?
 
 ### Se você é desenvolvedor:

@@ -15,16 +15,16 @@
 ════════════════════════════════════════════════════════════════════════════
 
 ✅ ARQUIVO PRINCIPAL
-   └─ planilha_zero_aos_5km.xlsx (45 treinos em 3 abas)
+   └─ data/planilha_zero_aos_5km.xlsx (45 treinos em 3 abas)
        ├─ Aba 1: Plano de Treinos (15 semanas × 3 sessões)
        ├─ Aba 2: Dicas & Protocolo (segurança + orientações)
        └─ Aba 3: Resumo Semanal (consolidação de progresso)
 
 ✅ DOCUMENTAÇÃO TÉCNICA (8 Arquivos Markdown)
    ├─ README.md (318 linhas | 7 referências científicas com DOI)
-   ├─ GETTING_STARTED.md (Guia prático de início)
-   ├─ EXECUTIVE_SUMMARY.md (Para tomadores de decisão)
-   ├─ INDEX.md (Mapa de navegação completo)
+   ├─ docs/GETTING_STARTED.md (Guia prático de início)
+   ├─ docs/EXECUTIVE_SUMMARY.md (Para tomadores de decisão)
+   ├─ docs/INDEX.md (Mapa de navegação completo)
    ├─ CHANGELOG.md (Histórico de versões)
    ├─ CONTRIBUTING.md (Como colaborar)
    ├─ SECURITY.md (Política de segurança + disclaimers)
@@ -175,16 +175,16 @@ Plataformas Compatíveis:
 ════════════════════════════════════════════════════════════════════════════
 
 Opção 1: Usar Planilha Direto
-  1. Baixe: planilha_zero_aos_5km.xlsx
+  1. Baixe: data/planilha_zero_aos_5km.xlsx
   2. Abra em Excel ou Google Sheets
-  3. Leia: GETTING_STARTED.md
+  3. Leia: docs/GETTING_STARTED.md
   4. Execute: Sua Semana 1
 
 Opção 2: GitHub
   1. Clone: git clone https://github.com/gabriel-ramos/zero-aos-5km.git
   2. Instale: uv pip install -r requirements.txt
   3. Execute: python generate_planilha.py
-  4. Use: planilha_zero_aos_5km.xlsx
+  4. Use: data/planilha_zero_aos_5km.xlsx
 
 Opção 3: Google Sheets
   1. Importe planilha no Google Sheets
@@ -230,7 +230,7 @@ GitHub:
 
 Documentação Online:
   README.md: documentação completa com referências
-  GETTING_STARTED.md: guia prático
+  docs/GETTING_STARTED.md: guia prático
   docs/GUIA_MEDICO.md: para profissionais
 
 Estudos Científicos:
@@ -286,7 +286,7 @@ Desenvolvimento:
 
 Documentação:
   [x] Estrutura clara e navegável
-  [x] Índice completo (INDEX.md)
+  [x] Índice completo (docs/INDEX.md)
   [x] Sumário executivo
   [x] Changelog
   [x] Diretrizes de contribuição

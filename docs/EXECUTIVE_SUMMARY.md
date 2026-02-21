@@ -21,7 +21,7 @@
 
 ## 📦 Componentes Entregáveis
 
-### 1. **Planilha Principal** (`planilha_zero_aos_5km.xlsx`)
+### 1. **Planilha Principal** (`data/planilha_zero_aos_5km.xlsx`)
 - **Aba 1**: Plano de Treinos — 15 semanas × 3 sessões/semana
 - **Aba 2**: Dicas & Protocolo — referências de segurança e progressão
 - **Aba 3**: Resumo Semanal — consolidação de progresso
@@ -259,7 +259,7 @@ META: 30 MIN CONTÍNUOS = 5KM 🏁
 
 - **GitHub**: https://github.com/gabriel-ramos/zero-aos-5km
 - **Documentação**: README.md (318 linhas)
-- **Planilha**: planilha_zero_aos_5km.xlsx (45 treinos)
+- **Planilha**: data/planilha_zero_aos_5km.xlsx (45 treinos)
 - **Referências**: 7 estudos com DOI completo
 
 ---

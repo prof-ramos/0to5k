@@ -1,13 +1,13 @@
 # 🏃 Planilha do Zero aos 5KM
 
-![Banner 0to5k](banner.png)
+![Banner 0to5k](assets/images/banner.png)
 
 [![Versão](https://img.shields.io/badge/versão-1.1.0-blue.svg)](https://github.com/gabrielramos/0to5k)
 [![Status](https://img.shields.io/badge/status-ativo-brightgreen.svg)](https://github.com/gabrielramos/0to5k)
 [![Publico](https://img.shields.io/badge/público-sedentários_e_fumantes-orange.svg)](https://github.com/gabrielramos/0to5k)
 [![Local](https://img.shields.io/badge/foco-Brasília-yellow.svg)](https://github.com/gabrielramos/0to5k)
 
-### Programa de Corrida para Sedentários e Fumantes — 15 Semanas
+## Programa de Corrida para Sedentários e Fumantes — 15 Semanas
 
 ---
 
@@ -42,7 +42,7 @@ Este programa foi elaborado com base em **7 estudos científicos revisados por p
 
 Esta planilha foi desenvolvida como um programa de corrida progressivo e seguro, adaptado especificamente para pessoas **sedentárias e/ou fumantes** que desejam chegar aos 5KM contínuos.
 
-### O que nos diferencia:
+### O que nos diferencia
 
 - **Fase zero exclusiva**: 3 semanas de adaptação apenas com caminhada.
 - **Progressão Conservadora**: 15 semanas de evolução gradual.

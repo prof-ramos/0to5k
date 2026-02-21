@@ -17,7 +17,7 @@
 git clone https://github.com/gabriel-ramos/zero-aos-5km.git
 
 # Ou baixe apenas:
-# → planilha_zero_aos_5km.xlsx
+# → data/planilha_zero_aos_5km.xlsx
 # → README.md
 ```
 
@@ -25,7 +25,7 @@ git clone https://github.com/gabriel-ramos/zero-aos-5km.git
 ```
 1. Abra Excel/Google Sheets
 2. Arquivo → Abrir
-3. Navegue até: planilha_zero_aos_5km.xlsx
+3. Navegue até: data/planilha_zero_aos_5km.xlsx
 4. Clique em "Plano de Treinos"
 ```
 
@@ -42,7 +42,7 @@ git clone https://github.com/gabriel-ramos/zero-aos-5km.git
 ```
 1. Acesse: https://sheets.google.com
 2. + Novo → Abrir um arquivo
-3. Selecione: planilha_zero_aos_5km.xlsx
+3. Selecione: data/planilha_zero_aos_5km.xlsx
 4. Google Sheets fará a conversão automaticamente
 ```
 
@@ -74,7 +74,7 @@ pip install pandas openpyxl
 python generate_planilha.py
 
 # 4. Novo arquivo gerado:
-# → planilha_zero_aos_5km.xlsx
+# → data/planilha_zero_aos_5km.xlsx
 ```
 
 ---
