@@ -14,7 +14,7 @@
 ### 1. Baixe o arquivo
 ```bash
 # Clone o repositório
-git clone https://github.com/gabriel-ramos/zero-aos-5km.git
+git clone https://github.com/gabrielramos/0to5k.git
 
 # Ou baixe apenas:
 # → data/planilha_zero_aos_5km.xlsx
@@ -55,27 +55,24 @@ git clone https://github.com/gabriel-ramos/zero-aos-5km.git
 
 ---
 
-## Opção 3: Regenerar a Planilha (Python)
+## Opção 3: Personalizar a Planilha (Sem Código)
 
-### Se você quer modificar ou customizar a planilha:
+### Se você quer adaptar o programa para seu contexto:
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/gabriel-ramos/zero-aos-5km.git
-cd zero-aos-5km
+git clone https://github.com/gabrielramos/0to5k.git
+cd 0to5k
 
-# 2. Instale as dependências com uv
-uv pip install -r requirements.txt
-
-# Ou com pip tradicional:
-pip install pandas openpyxl
-
-# 3. Execute o script
-python generate_planilha.py
-
-# 4. Novo arquivo gerado:
-# → data/planilha_zero_aos_5km.xlsx
+# 2. Faça uma cópia da planilha base
+cp data/planilha_zero_aos_5km.xlsx data/planilha_zero_aos_5km_personalizada.xlsx
 ```
+
+Depois:
+
+1. Abra `data/planilha_zero_aos_5km_personalizada.xlsx`.
+2. Ajuste nomes, observações e campos de registro conforme necessário.
+3. Mantenha a estrutura de semanas e fases para preservar a progressão segura.
 
 ---
 
@@ -313,8 +310,8 @@ Parabéns! Você superou a adaptação cardiorrespiratória! 🎉
 ## 📚 Próximas Leituras
 
 1. **README.md** — Documentação completa com referências científicas
-2. **docs/GUIA_MEDICO.md** — Se você é profissional de saúde
-3. **CONTRIBUTING.md** — Se quer melhorar o programa
+2. **docs/INDEX.md** — Mapa de navegação do projeto
+3. **docs/EXECUTIVE_SUMMARY.md** — Visão executiva do programa
 
 ---
 
