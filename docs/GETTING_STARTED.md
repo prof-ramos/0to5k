@@ -14,7 +14,7 @@
 ### 1. Baixe o arquivo
 ```bash
 # Clone o repositório
-git clone https://github.com/gabrielramos/0to5k.git
+git clone https://github.com/prof-ramos/0to5k.git
 
 # Ou baixe apenas:
 # → data/planilha_zero_aos_5km.xlsx
@@ -61,7 +61,7 @@ git clone https://github.com/gabrielramos/0to5k.git
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/gabrielramos/0to5k.git
+git clone https://github.com/prof-ramos/0to5k.git
 cd 0to5k
 
 # 2. Faça uma cópia da planilha base

@@ -2,12 +2,15 @@
 
 ![Banner 0to5k](assets/images/banner.png)
 
-[![Versão](https://img.shields.io/badge/versão-1.1.0-blue.svg)](https://github.com/gabrielramos/0to5k)
-[![Status](https://img.shields.io/badge/status-ativo-brightgreen.svg)](https://github.com/gabrielramos/0to5k)
-[![Publico](https://img.shields.io/badge/público-sedentários_e_fumantes-orange.svg)](https://github.com/gabrielramos/0to5k)
-[![Local](https://img.shields.io/badge/foco-Brasília-yellow.svg)](https://github.com/gabrielramos/0to5k)
+[![Versão](https://img.shields.io/badge/versão-1.1.0-blue.svg)](https://github.com/prof-ramos/0to5k)
+[![Status](https://img.shields.io/badge/status-ativo-brightgreen.svg)](https://github.com/prof-ramos/0to5k)
+[![Publico](https://img.shields.io/badge/público-sedentários_e_fumantes-orange.svg)](https://github.com/prof-ramos/0to5k)
+[![Local](https://img.shields.io/badge/foco-Brasília-yellow.svg)](https://github.com/prof-ramos/0to5k)
 
 ## Programa de Corrida para Sedentários e Fumantes — 15 Semanas
+
+> **Início rápido**: Leia o [Guia de Início Rápido](docs/GETTING_STARTED.md) para começar seu primeiro treino hoje.
+> Baixe a planilha em [`data/planilha_zero_aos_5km.xlsx`](data/planilha_zero_aos_5km.xlsx).
 
 ---
 
@@ -183,6 +186,19 @@ Sem problemas. Repita a mesma semana até se sentir confortável (PSE 5-6) para 
 - **[5] Biswas A, et al.** _IJERPH 2024_. Benefícios da caminhada para sedentários.
 - **[6] Haasova M, et al.** _Nicotine & Tobacco Res 2018_. Exercício na cessação do tabagismo.
 - **[7] Kessler HS, et al.** _Frontiers in Psychology 2014_. Riscos do HIIT para sedentários.
+
+---
+
+## 📂 Documentação do Projeto
+
+| Documento | Descrição |
+| :-------- | :-------- |
+| [Guia de Início Rápido](docs/GETTING_STARTED.md) | Passo a passo para sua primeira sessão |
+| [Índice de Navegação](docs/INDEX.md) | Mapa central de todos os documentos |
+| [Sumário Executivo](docs/EXECUTIVE_SUMMARY.md) | Visão geral para gestores e stakeholders |
+| [Arquitetura](ARCHITECTURE.md) | Estrutura técnica e decisões do projeto |
+| [Estrutura da Planilha](docs/estrutura_planilha_zero_aos_5km.md) | Schema detalhado das 3 abas da planilha |
+| [CLAUDE.md](CLAUDE.md) | Guia para assistentes de IA que trabalham neste repositório |
 
 ---
 

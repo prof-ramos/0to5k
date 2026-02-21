@@ -14,6 +14,7 @@ Não há backend, API, banco remoto, autenticação ou integrações automática
 ```text
 0to5k/
 ├── ARCHITECTURE.md
+├── CLAUDE.md
 ├── README.md
 ├── .gitignore
 ├── assets/
@@ -57,7 +58,8 @@ Arquivos de apoio:
 - `docs/GETTING_STARTED.md`: guia rápido;
 - `docs/INDEX.md`: índice de navegação;
 - `docs/EXECUTIVE_SUMMARY.md`: visão executiva;
-- `ARCHITECTURE.md`: visão arquitetural.
+- `ARCHITECTURE.md`: visão arquitetural;
+- `CLAUDE.md`: guia para assistentes de IA.
 
 ### 3.3 Ativos Estáticos
 
@@ -117,7 +119,7 @@ flowchart TD
 ## 9. Identificação do Projeto
 
 - **Nome**: 0to5k
-- **Repositório**: [github.com/gabrielramos/0to5k](https://github.com/gabrielramos/0to5k)
+- **Repositório**: [github.com/prof-ramos/0to5k](https://github.com/prof-ramos/0to5k)
 - **Responsável**: Gabriel Ramos
 - **Última atualização deste documento**: 2026-02-21
 

@@ -23,6 +23,7 @@ O produto atual é composto por:
 
 - `README.md`
 - `ARCHITECTURE.md`
+- `CLAUDE.md`
 - `docs/GETTING_STARTED.md`
 - `docs/INDEX.md`
 - `docs/estrutura_planilha_zero_aos_5km.md`
@@ -72,7 +73,7 @@ O protocolo do programa foi documentado com base científica no `README.md`, inc
 ## Identificação
 
 - Projeto: `0to5k`
-- Repositório: `github.com/gabrielramos/0to5k`
+- Repositório: `github.com/prof-ramos/0to5k`
 - Responsável: Gabriel Ramos
 - Versão documental: 1.1.0
 - Atualização: 2026-02-21
