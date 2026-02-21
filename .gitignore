@@ -1,0 +1,22 @@
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Office Temporary Files
+~$*
+
+# Agentic / Brain (if applicable)
+.gemini/
+.agent/
+.antigravity/
+
+# Metrics / Logs
+*.log
