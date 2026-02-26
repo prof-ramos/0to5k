@@ -78,22 +78,81 @@ Este repositório contém documentação separada para cada componente:
 
 ---
 
+## 📐 Arquitetura do Programa
+
+```mermaid
+graph TB
+    subgraph CORE["🎯 NÚCLEO DO PROGRAMA"]
+        TREINO[🏋 Treino PPL<br/>Força & Hipertrofia]
+        CORRIDA[🏃 Corrida<br/>Zero → 5KM]
+        NUTRI[🥗 Nutrição<br/>3.145 kcal]
+    end
+
+    subgraph SUPPORT["⚡ SUPORTE"]
+        CICLO[💉 Ciclo Hormonal<br/>Supervisão Médica]
+        EXAMES[🧪 Exames<br/>Monitoramento]
+    end
+
+    EXAMES --> TREINO
+    EXAMES --> CORRIDA
+    EXAMES --> CICLO
+    NUTRI --> TREINO
+    NUTRI --> CORRIDA
+    CICLO -.->|Opcional| TREINO
+
+    style CORE fill:#e1f5fe
+    style SUPPORT fill:#fff3e0
+```
+
+---
+
 ## 📅 Fluxo Recomendado de Leitura
 
-Para começar corretamente, siga esta ordem:
+```mermaid
+flowchart LR
+    A[📖 README] --> B[🏃 Corrida]
+    B --> C[🏋 Treino PPL]
+    C --> D[🥗 Nutrição]
+    D --> E[🧪 Exames]
+    E --> F[💉 Ciclo Hormonal]
 
-1. **Leia o README atual** (este documento) — Visão geral
-2. **Leia o plano de corrida** — Entenda a base aeróbica
-3. **Leia o treino PPL** — Estrutura de força
-4. **Leia a nutrição** — Planejamento alimentar
-5. **Leia exames laboratoriais** — Monitoramento obrigatório
-6. **Leia o ciclo hormonal** — Somente sob supervisão médica
+    style A fill:#4caf50,color:#fff
+    style F fill:#f44336,color:#fff
+```
 
 > **IMPORTANTE:** Os componentes são integrados. Exames laboratoriais são obrigatórios durante todo o programa, especialmente durante o ciclo hormonal.
 
 ---
 
 ## ⚠️ Avisos Críticos
+
+### 🚨 Fluxo de Segurança
+
+```mermaid
+flowchart TD
+    subgraph SINAIS["⚠️ SINAIS DE ALERTA"]
+        S1[Dor no peito]
+        S2[Tontura intensa]
+        S3[Falta de ar extrema]
+        S4[Batimentos irregulares]
+    end
+
+    subgraph ACAO["🛑 AÇÃO IMEDIATA"]
+        PARAR[PARAR IMEDIATAMENTE]
+        DESCANSAR[Descansar 5-10 min]
+        MEDICO[Consultar médico]
+    end
+
+    S1 --> PARAR
+    S2 --> PARAR
+    S3 --> PARAR
+    S4 --> PARAR
+    PARAR --> DESCANSAR
+    DESCANSAR --> MEDICO
+
+    style SINAIS fill:#ffebee
+    style ACAO fill:#ffcdd2
+```
 
 ### Segurança Médica
 - **Exames prévios obrigatórios:** Eletrocardiograma, exames de sangue completos
@@ -102,6 +161,31 @@ Para começar corretamente, siga esta ordem:
 - **Parar imediatamente:** Se qualquer sinal de alerta ocorrer
 
 ### Durante o Ciclo Hormonal
+
+```mermaid
+flowchart LR
+    subgraph MONITOR["📊 Monitoramento"]
+        HEMO[Hematócrito<br/>&lt; 54%]
+        FC[FC Repouso<br/>&lt; +10 bpm]
+        HIDRATA[Hidratação<br/>4-5 L/dia]
+    end
+
+    subgraph AVOID["🚫 Evitar"]
+        AINE[AINEs<br/>Ibuprofeno/Diclofenaco]
+    end
+
+    subgraph OK["✅ Alternativas"]
+        NAT[Naturais<br/>Curcumina/Ômega-3/Gengibre]
+    end
+
+    HEMO --> |&gt; 54%| ALERT[⚠️ Risco Trombose]
+    FC --> |&gt; +10 bpm| ALERT2[⚠️ Sobrecarga Cardíaca]
+
+    style ALERT fill:#ffcdd2
+    style ALERT2 fill:#ffcdd2
+    style MONITOR fill:#e3f2fd
+```
+
 - **Hematócrito crítico:** Deve permanecer abaixo de 54% (risco de trombose)
 - **Hidratação:** Aumentar consumo de água (4-5L/dia) para reduzir risco trombótico
 - **Frequência cardíaca:** Monitorar FC de repouso (aumento +10 bpm indica sobrecarga)
@@ -111,6 +195,45 @@ Para começar corretamente, siga esta ordem:
 ---
 
 ## 📊 Resumo de Metas
+
+### 🔄 Integração Semanal
+
+```mermaid
+graph LR
+    subgraph SEG["Segunda"]
+        PUSH[🏋 Push<br/>Peito/Ombro/Tríceps]
+    end
+
+    subgraph TER["Terça"]
+        RUN1[🏃 Corrida<br/>Fase Atual]
+    end
+
+    subgraph QUA["Quarta"]
+        PULL[🏋 Pull<br/>Costas/Bíceps]
+    end
+
+    subgraph QUI["Quinta"]
+        RUN2[🏃 Corrida<br/>Fase Atual]
+    end
+
+    subgraph SEX["Sexta"]
+        LEGS[🏋 Legs<br/>Pernas Completo]
+    end
+
+    subgraph SAB["Sábado"]
+        OPT[🏃 Corrida Opcional<br/>ou Descanso]
+    end
+
+    subgraph DOM["Domingo"]
+        REST[😴 DESCANSO<br/>Recuperação]
+    end
+
+    SEG --> TER --> QUA --> QUI --> SEX --> SAB --> DOM
+
+    style REST fill:#e8f5e9
+```
+
+### 📋 Metas por Componente
 
 | Componente     | Meta Principal              | Duração   | Frequência              |
 |---------------|-----------------------------|-----------|------------------------|
@@ -140,33 +263,71 @@ Todas as referências estão listadas nos respectivos documentos.
 
 ### Pré-requisitos Mínimos
 
-Antes de iniciar qualquer componente, você deve:
+```mermaid
+flowchart TD
+    START([🏁 Iniciar Programa]) --> CHECK1{Consulta Médica?}
+    CHECK1 -->|Não| STOP1[❌ PARE: Consulte um médico]
+    CHECK1 -->|Sim| CHECK2{Exames Completos?}
+    CHECK2 -->|Não| STOP2[❌ PARE: Faça os exames]
+    CHECK2 -->|Sim| CHECK3{Avaliação Física?}
+    CHECK3 -->|Não| STOP3[❌ PARE: Avalie composição corporal]
+    CHECK3 -->|Sim| READY[✅ LIBERADO PARA INICIAR]
+
+    READY --> CHOICE{Ciclo Hormonal?}
+    CHOICE -->|Sim| MED[📋 Liberação médica específica]
+    CHOICE -->|Não| GO[🏃 Começar Treino + Corrida]
+    MED --> GO
+
+    style STOP1 fill:#ffcdd2
+    style STOP2 fill:#ffcdd2
+    style STOP3 fill:#ffcdd2
+    style READY fill:#c8e6c9
+    style GO fill:#a5d6a7
+```
+
+**Checklist Obrigatório:**
 
 - [ ] **Consulta médica completa** — AVALIAÇÃO CARDIOVASCULAR OBRIGATÓRIA
-- [ ] **Exames de sangue iniciais** — Painel completo (veja \`exames/exames_monitoramento.md\`)
+- [ ] **Exames de sangue iniciais** — Painel completo (veja `exames/exames_monitoramento.md`)
 - [ ] **Avaliação física** — Peso, altura, composição corporal
 - [ ] **Liberação médica** — Para iniciar ciclo hormonal (se aplicável)
 - [ ] **Equipamento básico** — Tênis, roupa adequada, garrafa de água
 - [ ] **Local de treino** — Academia ou espaço adequado
 
+### 📅 Timeline do Programa
+
+```mermaid
+gantt
+    title Programa 0to5k - 15 Semanas
+    dateFormat  YYYY-MM-DD
+    section Preparação
+    Exames Iniciais           :a1, 2026-01-01, 7d
+    Consulta Médica           :a2, after a1, 7d
+    section Fase 0 - Adaptação
+    Treino PPL (Adaptação)    :p0, after a2, 21d
+    Corrida (Caminhada)       :c0, after a2, 21d
+    section Fase 1 - Base
+    PPL + Corrida Fase 1      :f1, after p0, 28d
+    Exames Semana 6           :ex1, after p0, 1d
+    section Fase 2 - Progressão
+    PPL + Corrida Fase 2      :f2, after f1, 28d
+    Exames Semana 12          :ex2, after f1, 1d
+    section Fase 3 - Consolidação
+    PPL + Corrida Fase 3      :f3, after f2, 28d
+    Meta: 5KM em 30min        :meta, after f2, 28d
+    Exames Pós-Ciclo          :ex3, after f3, 7d
+```
+
 ### Cronograma Sugerido
 
-**Semana 0-1:**
-1. Fazer exames laboratoriais completos
-2. Consultar médico (aprovação)
-3. Montar planejamento nutricional
-4. Configurar horários de treino
-
-**Semana 2-15:**
-1. Iniciar Fase 0 da corrida (caminhada)
-2. Iniciar Fase 0 do PPL (adaptação)
-3. Seguir plano nutricional estritamente
-4. (Se aprovado) Iniciar ciclo hormonal
-
-**Semana 6, 12, 16:**
-1. Repetir exames laboratoriais
-2. Ajustar dosagens (se aplicável)
-3. Avaliar progresso com médico
+| Semana | Ação Principal | Checkpoints |
+|--------|----------------|-------------|
+| **0-1** | Exames + Consulta médica | Liberação para treinar |
+| **2-4** | Fase 0 (Adaptação) | PPL leve + Caminhada |
+| **5-8** | Fase 1 (Base) | Exames na semana 6 ⚠️ |
+| **9-12** | Fase 2 (Progressão) | Exames na semana 12 ⚠️ |
+| **13-15** | Fase 3 (Consolidação) | Meta: 5KM contínuo |
+| **16+** | Pós-programa | Exames finais + Manutenção |
 
 ---
 
